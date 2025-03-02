@@ -7,7 +7,8 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 # 디렉토리별로 모든 .cpp 파일을 찾는다.
 file(GLOB_RECURSE SOURCE_FILES
-    "${CMAKE_SOURCE_DIR}/*.cpp"  # main.cpp 등 루트에 있는 cpp 파일 포함
+    "${CMAKE_SOURCE_DIR}/*.cpp",  # main.cpp 등 루트에 있는 cpp 파일 포함
+    "${CMAKE_SOURCE_DIR}/*.h" 
 )
 
 # 파일 이름이 CMakeCXXCompilerId.cpp로 끝나는 항목들을 제거
