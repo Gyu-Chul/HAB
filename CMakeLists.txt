@@ -7,12 +7,11 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 # 디렉토리별로 모든 .cpp 파일을 찾는다.
 file(GLOB_RECURSE SOURCE_FILES
-    "${CMAKE_SOURCE_DIR}/BackEnd/*.cpp"
-    "${CMAKE_SOURCE_DIR}/CommonDatas/*.cpp"
-    "${CMAKE_SOURCE_DIR}/FrontEnd/*.cpp"
-    "${CMAKE_SOURCE_DIR}/GUI/*.cpp"
-    "${CMAKE_SOURCE_DIR}/src/*.cpp"  # main.cpp 등 루트에 있는 cpp 파일 포함
+    "${CMAKE_SOURCE_DIR}/*.cpp"  # main.cpp 등 루트에 있는 cpp 파일 포함
 )
+
+# 파일 이름이 CMakeCXXCompilerId.cpp로 끝나는 항목들을 제거
+list(FILTER SOURCE_FILES EXCLUDE REGEX "CMakeCXXCompilerId\\.cpp$")
 
 # 실행 파일 생성
 add_executable(MyExecutable ${SOURCE_FILES})
