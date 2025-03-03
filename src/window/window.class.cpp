@@ -2,7 +2,7 @@
 #include "window.class.h"
 
 Window::Window() {
-    std::cout << "window class connected to interpreter" << std::endl;
+    std::cout << "window class connected to graphicInterface!" << std::endl;
 }
 
 void Window::sayHello() {
