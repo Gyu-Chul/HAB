@@ -3,7 +3,7 @@
 
 
 int main() {
-    std::cout << "==== MAIN . CPP ====" << std::endl;
+    std::cout << "==== MAIN.CPP ====" << std::endl;
     Interpreter interpreter;
     interpreter.sayHello();
 
