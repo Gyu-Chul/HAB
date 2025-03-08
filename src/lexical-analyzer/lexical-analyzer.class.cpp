@@ -11,10 +11,12 @@ LexicalAnalyzer::LexicalAnalyzer() {
 
 void LexicalAnalyzer::run() {
 
+
     Scanner scanner;
     this -> sourceCode = scanner.run();
 
     // 2차원 배열(벡터) 내용 확인
+    // TO DO : 디버깅 환경변수 일 때 출력 조정 필요
     std::cout << "===== SCANNER_CONVERT_RESULT (2D array) =====" << std::endl;
     for (size_t i = 0; i < sourceCode.size(); ++i) {
         std::cout << "Line " << i << ":" << std::endl;

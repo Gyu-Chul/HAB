@@ -1,7 +1,7 @@
 #include <iostream>
 #include "graphicInterface.class.h"
 #include "./src/code-editor/code-editor.class.h"
-#include "./src/common-datas/common-datas.class.h"
+#include "./src/datas/datas.class.h"
 #include "./src/graphic-maker/graphic-maker.class.h"
 #include "./src/graphic-utility/graphic-utility.class.h"
 #include "./src/runtime/runtime.class.h"
@@ -10,18 +10,18 @@
 GraphicInterface::GraphicInterface() {
     std::cout << "\n\n\nGraphicInterface class connected to main \n" << std::endl;
     std::cout << "==== GRAPHIC_INTERFACE.CPP ====" << std::endl;
-    CodeEditor CodeEditor;
-    CodeEditor.sayHello();
-    CommonDatas CommonDatas;
-    CommonDatas.sayHello();
-    GraphicMaker GraphicMaker;
-    GraphicMaker.sayHello();
-    GraphicUtility GraphicUtility;
-    GraphicUtility.sayHello();
-    Runtime Runtime;
-    Runtime.sayHello();
-    Window Window;
-    Window.sayHello();
+    CodeEditor codeEditor;
+    codeEditor.sayHello();
+    Datas datas;
+    datas.sayHello();
+    GraphicMaker graphicMaker;
+    graphicMaker.sayHello();
+    GraphicUtility graphicUtility;
+    graphicUtility.sayHello();
+    Runtime runtime;
+    runtime.sayHello();
+    Window window;
+    window.sayHello();
     std::cout << "==== GRAPHIC_INTERFACE.CPP OVER ====\n\n" << std::endl;
 }
 
