@@ -7,7 +7,7 @@
 class Scanner {
 public:
     Scanner();
-    std::vector<std::vector<char>> run(const std::string &pythonCode);
+    std::vector<std::vector<char>> run();
 };
 
 #endif // SCANNER_H

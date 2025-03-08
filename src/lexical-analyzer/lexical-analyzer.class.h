@@ -8,10 +8,9 @@
 class LexicalAnalyzer {
 public:
     LexicalAnalyzer();
-    void sayHello();
-
-private:
     std::vector<std::vector<char>> sourceCode;
+    void run();
+
 };
 
 #endif // LEXICAL_ANALYZER_H

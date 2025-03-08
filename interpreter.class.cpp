@@ -8,7 +8,7 @@ Interpreter::Interpreter() {
     std::cout << "Interpreter class connected to main \n" << std::endl;
     std::cout << "==== INTERPRETER.CPP ====" << std::endl;
     LexicalAnalyzer lexicalAnalyzer;
-    lexicalAnalyzer.sayHello();
+    lexicalAnalyzer.run();
     SyntaxAnalyzer syntaxAnalyzer;
     syntaxAnalyzer.sayHello();
     SemanticAnalyzer semanticAnalyzer ;
