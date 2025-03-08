@@ -2,7 +2,7 @@
 #include <sstream>
 #include <string>
 #include "lexical-analyzer.class.h"
-#include "./Scanner/scanner.class.h"
+#include "./scanner/scanner.class.h"
 
 
 LexicalAnalyzer::LexicalAnalyzer() {
