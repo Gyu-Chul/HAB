@@ -4,8 +4,8 @@ from dotenv import load_dotenv
 import interpreter_class
 import graphicInterface_class
 
-
-def main():
+# 실행 파일(.exe) 필요 --> 환경변수 세팅 하고 hab 파일 실행
+def hab():
     
     print(" ==== MAIN FUNCTION ====")
     print(os.environ["DEBUG"])
@@ -23,4 +23,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    hab()
