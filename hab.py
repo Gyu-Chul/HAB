@@ -1,8 +1,7 @@
 import sys
 import os
-
-sys.path.append(os.path.abspath("src"))
 from dotenv import load_dotenv
+sys.path.append(os.path.abspath("src"))
 
 import interpreter_class
 import graphicInterface_class
