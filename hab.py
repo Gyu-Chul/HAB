@@ -1,4 +1,7 @@
+import sys
 import os
+
+sys.path.append(os.path.abspath("src"))
 from dotenv import load_dotenv
 
 import interpreter_class
@@ -11,7 +14,7 @@ def hab():
     print(os.environ["DEBUG"])
 
     interpreter = interpreter_class.Interpreter()
-    interpreter.sayHello()
+    interpreter.run()
 
 
     #graphicInterface = GraphicInterface()
