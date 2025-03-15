@@ -17,13 +17,15 @@ class Interpreter:
             raise "FileNotExist"
 
         lexicalAnalyzer = LexicalAnalyzer(filePath)
-        syntaxAnalyzer = SyntaxAnalyzer()
+        syntaxAnalyzer = SyntaxAnalyzer(filePath)
         semanticAnalyzer = SemanticAnalyzer()
+
         lexicalAnalyzer.run()
         for token in lexicalAnalyzer.tokens:
             print(f"Type: {token['type']}, String: {repr(token['string'])}, Start: {token['start']}, End: {token['end']}")
 
-
         syntaxAnalyzer.run()
+        syntaxAnalyzer.print_ast_tree()
+
         semanticAnalyzer.run()
         print("==== INTERPRETER.PY OVER ====")

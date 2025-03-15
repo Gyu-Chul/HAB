@@ -10,7 +10,7 @@ class LexicalAnalyzer:
         print("==== LEXICAL_ANALYZER.PY ====")
 
         with open(self.filePath, "rb") as f:
-            tokens = tokenize.tokenize(f.readline)
+            sourceCode = tokenize.tokenize(f.readline)
 
             self.tokens = [
                 {
@@ -19,8 +19,8 @@ class LexicalAnalyzer:
                     "start": token.start,  # (줄 번호, 컬럼 번호)
                     "end": token.end,  # (줄 번호, 컬럼 번호)
                 }
-                for token in tokens  # 모든 토큰 유지
+                for token in sourceCode  # 모든 토큰 유지
             ]
 
         print("==== LEXICAL_ANALYZER.PY OVER ====")
-        return tokens
+        return self.tokens
