@@ -9,14 +9,14 @@ class Interpreter:
 
     def run(self):
         print("==== INTERPRETER.PY ====")
-        base_dir = os.path.abspath(os.path.join(__file__, "../"))
-        file_path = os.path.join(base_dir, "script.py")
+        baseDir = os.path.abspath(os.path.join(__file__, "../"))
+        filePath = os.path.join(baseDir, "script.py")
 
-        if not os.path.isfile(file_path):
-            print(f"[ERROR] 파일이 존재하지 않습니다: {file_path}")
+        if not os.path.isfile(filePath):
+            print(f"[ERROR] 파일이 존재하지 않습니다: {filePath}")
             raise "FileNotExist"
 
-        lexicalAnalyzer = LexicalAnalyzer(file_path)
+        lexicalAnalyzer = LexicalAnalyzer(filePath)
         syntaxAnalyzer = SyntaxAnalyzer()
         semanticAnalyzer = SemanticAnalyzer()
         lexicalAnalyzer.run()

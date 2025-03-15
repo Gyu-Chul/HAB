@@ -2,14 +2,14 @@ import tokenize
 from io import BytesIO
 class LexicalAnalyzer:
 
-    def __init__(self,file_path):
+    def __init__(self,filePath):
         self.tokens = []
-        self.file_path = file_path
+        self.filePath = filePath
         print("LexicalAnalyzer class created in Interpreter.py\n")
     def run(self):
         print("==== LEXICAL_ANALYZER.PY ====")
 
-        with open(self.file_path, "rb") as f:
+        with open(self.filePath, "rb") as f:
             tokens = tokenize.tokenize(f.readline)
 
             self.tokens = [
