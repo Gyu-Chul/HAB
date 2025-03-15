@@ -1,19 +1,16 @@
-from .scanner_class import Scanner
 import tokenize
 from io import BytesIO
 class LexicalAnalyzer:
 
-    def __init__(self):
+    def __init__(self,file_path):
         self.tokens = []
+        self.file_path = file_path
         print("LexicalAnalyzer class created in Interpreter.py\n")
     def run(self):
         print("==== LEXICAL_ANALYZER.PY ====")
-        scanner = Scanner()
-        file_path = scanner.run()
 
-        with open(file_path, "rb") as f:
+        with open(self.file_path, "rb") as f:
             tokens = tokenize.tokenize(f.readline)
-
 
             self.tokens = [
                 {
