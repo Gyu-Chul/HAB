@@ -15,8 +15,8 @@ def hab():
     interpreter.run()
 
 
-    #graphicInterface = GraphicInterface()
-
+    graphicInterface = graphicInterface_class.GraphicInterface()
+    graphicInterface.run()
 
     print("==== HAB END ====")
 
