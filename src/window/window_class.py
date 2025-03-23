@@ -1,10 +1,11 @@
 import wx
 from graphic_utility.graphicUtility_class import GraphicUtility
 from code_editor.codeEditor_class import CodeEditor
+from graphic_utility.graphicUtility_class import BasicDiagram  # 새로 정의한 클래스
 
 class Window(wx.Frame):
     """메인 윈도우"""
-    def __init__(self):
+    def __init__(self, diagram):  # diagram을 인자로 받음
         print("==== WINDOW.PY ====")
 
         super().__init__(parent=None, title="wxPython 코드 에디터 + 벡터 그래픽", size=(1000, 800), )
@@ -17,7 +18,8 @@ class Window(wx.Frame):
         sizer.Add(self.code_editor, 1, wx.EXPAND | wx.ALL, 5)
         
         # 우측: 벡터 이미지 패널 (50%)
-        self.draw_panel = GraphicUtility(panel)
+        self.draw_panel = GraphicUtility(panel, diagram)
+        self.draw_panel.set_shape(diagram)  # 도형 정보 전달
         sizer.Add(self.draw_panel, 1, wx.EXPAND | wx.ALL, 5)
         
         panel.SetSizer(sizer)  # 패널에 레이아웃 적용
